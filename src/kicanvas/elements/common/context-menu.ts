@@ -36,9 +36,7 @@ export class KCContextMenuElement extends KCUIElement {
                 cursor: pointer;
                 color: var(--dropdown-fg);
                 user-select: none;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                overflow-wrap: anywhere;
             }
 
             .menu-item:hover {

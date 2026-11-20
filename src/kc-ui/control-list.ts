@@ -49,9 +49,7 @@ export class KCUIControlListItemElement extends KCUIElement {
                 flex: 1 1 100%;
                 display: block;
                 margin: 0;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                overflow-wrap: anywhere;
             }
 
             ::slotted(input),

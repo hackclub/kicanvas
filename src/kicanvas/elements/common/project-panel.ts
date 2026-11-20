@@ -25,16 +25,12 @@ export class KCProjectPanelElement extends KCUIElement {
 
             .page span.name {
                 margin-right: 1em;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                overflow-wrap: anywhere;
             }
 
             .page span.filename {
                 flex: 1;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                overflow-wrap: anywhere;
                 margin-left: 1em;
                 text-align: right;
                 color: #aaa;

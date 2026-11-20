@@ -164,9 +164,7 @@ export class KCUIMenuItemElement extends KCUIElement {
             ::slotted(*) {
                 flex: 1 1 100%;
                 display: block;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+                overflow-wrap: anywhere;
             }
 
             ::slotted(.narrow) {
