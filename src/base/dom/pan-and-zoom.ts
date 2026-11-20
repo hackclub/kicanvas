@@ -160,14 +160,11 @@ export class PanAndZoom {
         dy = Math.sign(dy) * Math.min(page_delta_multiplier, Math.abs(dy));
 
         if (!prefs.alignControlsWithKiCad) {
-            // pinch zoom
-            if (e.ctrlKey) {
+            if (e.shiftKey) {
+                this.#handle_pan(dx, dy);
+            } else {
                 this.#rect = this.target.getBoundingClientRect();
                 this.#handle_zoom(dy, this.#relative_mouse_pos(e));
-            }
-            // pan
-            else {
-                this.#handle_pan(dx, dy);
             }
         } else {
             if (e.shiftKey || e.ctrlKey) {
