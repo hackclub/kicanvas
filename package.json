@@ -3,10 +3,6 @@
     "version": "0.0.0",
     "description": "",
     "type": "module",
-    "exports": "./dist/kicanvas.js",
-    "files": [
-        "dist/kicanvas.js"
-    ],
     "directories": {
         "test": "tests"
     },
