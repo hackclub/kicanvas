@@ -4,7 +4,7 @@
     Full text available at: https://opensource.org/licenses/MIT
 */
 
-import { css, html } from "../base/web-components";
+import { css, html, literal } from "../base/web-components";
 import { KCUIElement } from "./element";
 
 /**
@@ -49,7 +49,7 @@ export class KCUIIconElement extends KCUIElement {
             // TODO: 404 error?
             const url = `${KCUIIconElement.sprites_url}#${name}`;
             return html`<svg viewBox="0 0 48 48" width="48">
-                <use xlink:href="${url}" />
+                <use xlink:href="${literal`${url}`}" />
             </svg>`;
         } else {
             return html`<slot></slot>`;
