@@ -3,6 +3,10 @@
     "version": "0.0.0",
     "description": "",
     "type": "module",
+    "exports": "./dist/kicanvas.js",
+    "files": [
+        "dist/kicanvas.js"
+    ],
     "directories": {
         "test": "tests"
     },
@@ -39,7 +43,8 @@
         "build:font": "node scripts/build-font.js",
         "build:sprites": "node scripts/build-sprites.js",
         "build": "tsc -p tsconfig.json && node scripts/build.js",
-        "clean": "rm -rf build && rm -rf debug/kicanvas"
+        "clean": "rm -rf build && rm -rf debug/kicanvas",
+        "dist": "npm run build && mkdir -p dist && cp build/kicanvas.js dist/kicanvas.js"
     },
     "repository": {
         "type": "git",

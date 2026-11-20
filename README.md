@@ -1,3 +1,17 @@
+# KiCanvas (Hack Club fork)
+
+This is the Hack Club fork of [KiCanvas](https://github.com/theacodes/kicanvas), used by the file viewers in Fabricate and [FART](https://github.com/hackclub/fart). The `hackclub` branch is upstream `main` plus small patches, one commit each, so it can be rebased onto new upstream releases.
+
+The built bundle is committed at `dist/kicanvas.js`, so apps install it straight from GitHub at a pinned commit:
+
+```json
+"kicanvas": "github:hackclub/kicanvas#<commit>"
+```
+
+After changing the source, run `npm run dist` and commit `dist/kicanvas.js` with the change.
+
+The theme reads the host page's `--color-*` tokens, so the embedding page has to define them.
+
 # KiCanvas
 
 [KiCanvas] is an **interactive**, **browser-based** viewer for [KiCad] schematics and boards. You can try it out for yourself at https://kicanvas.org.

@@ -3,6 +3,7 @@
 **/.hg
 **/node_modules
 build/
+dist/
 debug/kicanvas
 docs/site
 .github/
