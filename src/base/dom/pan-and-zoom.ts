@@ -208,14 +208,16 @@ export class PanAndZoom {
     }
 
     #handle_zoom(delta: number, mouse?: Vec2) {
+        const mouse_world =
+            mouse != null ? this.camera.screen_to_world(mouse) : null;
+
         this.camera.zoom *= Math.exp(delta * -zoom_speed);
         this.camera.zoom = Math.min(
             this.max_zoom,
             Math.max(this.camera.zoom, this.min_zoom),
         );
 
-        if (mouse != null) {
-            const mouse_world = this.camera.screen_to_world(mouse);
+        if (mouse != null && mouse_world != null) {
             const new_world = this.camera.screen_to_world(mouse);
             const center_delta = mouse_world.sub(new_world);
 
