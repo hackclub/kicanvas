@@ -79,10 +79,10 @@ export class Canvas2DRenderer extends Renderer {
         this.update_canvas_size();
 
         this.ctx2d!.setTransform();
-        this.ctx2d!.scale(window.devicePixelRatio, window.devicePixelRatio);
-
         this.ctx2d!.fillStyle = this.background_color.to_css();
         this.ctx2d!.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        this.ctx2d!.scale(window.devicePixelRatio, window.devicePixelRatio);
+
         this.ctx2d!.lineCap = "round";
         this.ctx2d!.lineJoin = "round";
     }
