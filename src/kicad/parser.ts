@@ -380,7 +380,7 @@ export function parse_expr(expr: string | List, ...defs: PropertyDefinition[]) {
 
             if (!def) {
                 log.warn(
-                    `Bare element ${element} is undefined at position ${n} in expression ${expr}`,
+                    `Bare element ${element} is undefined at position ${n}`,
                 );
                 continue;
             }
@@ -395,7 +395,7 @@ export function parse_expr(expr: string | List, ...defs: PropertyDefinition[]) {
 
         if (!def) {
             log.warn(
-                `No definition found for element ${element} in expression ${expr}`,
+                `No definition found for element ${Array.isArray(element) ? element[0] : element}`,
             );
             continue;
         }
